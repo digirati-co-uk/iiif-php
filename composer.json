@@ -1,0 +1,25 @@
+{
+  "name": "dlcs/iiif-php",
+  "license": "MIT",
+  "type": "library",
+  "description": "IIIF library for PHP",
+  "authors": [
+    {
+      "name": "Stephen Fraser",
+      "email": "stephen.fraser@digirati.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "^6.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "IIIF\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "IIIF\\Tests\\": "tests"
+    }
+  }
+}
