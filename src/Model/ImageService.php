@@ -7,7 +7,7 @@ namespace IIIF\Model;
 class ImageService
 {
     /** @var array<Tile> */
-    protected $tiles;
+    private $tiles;
     private $id;
     private $height;
     private $width;
@@ -16,10 +16,10 @@ class ImageService
         string $id,
         int $height,
         int $width,
-        array $tiles
+        array $tiles = null
     )
     {
-        $this->tiles = $tiles;
+        $this->tiles = $tiles ? $tiles : [];
         $this->id = $id;
         $this->height = $height;
         $this->width = $width;
@@ -31,9 +31,9 @@ class ImageService
             $service['@id'],
             $service['height'],
             $service['width'],
-            array_map(function ($tile) : Tile {
+            isset($service['tiles']) ? array_map(function ($tile) : Tile {
                 return Tile::fromArray($tile);
-            }, $service['tiles'])
+            }, $service['tiles']) : null
         );
     }
 
@@ -51,7 +51,7 @@ class ImageService
                 $largest = $tile->getLargestDimension();
             }
         }
-        return $largest;
+        return $largest === 0 ? 256 : $largest;
     }
 
     public function getThumbnail()

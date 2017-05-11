@@ -13,11 +13,11 @@ class ImageResource
 
     public function __construct(
         string $id,
-        string $type,
-        string $format,
+        string $type = null,
+        string $format = null,
         int $height,
         int $width,
-        ImageService $service
+        ImageService $service = null
     )
     {
         $this->service = $service;
@@ -32,11 +32,11 @@ class ImageResource
     {
         return new static(
             $resource['@id'],
-            $resource['@type'],
-            $resource['format'],
-            $resource['height'],
-            $resource['width'],
-            ImageService::fromArray($resource['service'])
+            $resource['@type'] ?? null,
+            $resource['format'] ?? null,
+            $resource['height'] ?? 0,
+            $resource['width'] ?? 0,
+            isset($resource['service']) ? ImageService::fromArray($resource['service']) : null
         );
     }
 

@@ -73,7 +73,13 @@ class Region
 
     public static function create($x, $y, $h, $w)
     {
-
+        return new static(
+            'pixel',
+            $x,
+            $y,
+            $h,
+            $w
+        );
     }
 
 }

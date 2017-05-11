@@ -51,6 +51,20 @@ class Canvas
         return $this->getImage()->getThumbnail();
     }
 
+    public static function parseThumbnailService($thumbnail)
+    {
+        if (!$thumbnail) {
+            return null;
+        }
+        if (is_string($thumbnail)) {
+            return $thumbnail;
+        }
+        if (isset($thumbnail['@id'])) {
+            return $thumbnail['@id'];
+        }
+        return null;
+    }
+
     public static function fromArray($canvas)
     {
         $images = array_map(function($image) {
@@ -60,7 +74,7 @@ class Canvas
         return new static(
             $canvas['@id'],
             $canvas['label'] ?? '',
-            $canvas['thumbnail'] ?? null,
+            self::parseThumbnailService($canvas['thumbnail'] ?? null),
             $canvas['height'],
             $canvas['width'],
             $images
