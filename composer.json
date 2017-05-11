@@ -9,7 +9,7 @@
       "email": "stephen.fraser@digirati.com"
     }
   ],
-  "require": {
+  "require-dev": {
     "phpunit/phpunit": "^6.1"
   },
   "autoload": {
