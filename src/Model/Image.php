@@ -1,8 +1,6 @@
 <?php
 
-
 namespace IIIF\Model;
-
 
 class Image
 {
@@ -16,8 +14,7 @@ class Image
         string $motivation,
         string $on,
         ImageResource $imageService
-    )
-    {
+    ) {
         $this->resource = $imageService;
         $this->id = $id;
         $this->motivation = $motivation;

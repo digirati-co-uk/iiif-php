@@ -1,0 +1,67 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://presley.dlcs-ida.org/iiif/idatest01/collection/_roll_M-1011_145_",
+  "@type": "sc:Collection",
+  "members": [
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-31-33/manifest",
+      "@type": "sc:Manifest",
+      "label": "Standing Rock Demo 1"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-4-28/manifest",
+      "@type": "sc:Manifest",
+      "label": "Finding Aid, M1011-145"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-30-47/manifest",
+      "@type": "sc:Manifest",
+      "label": "1932 Standing Rock, Narrative Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-48-134/manifest",
+      "@type": "sc:Manifest",
+      "label": "1932 Standing Rock, Statistical Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-135-152/manifest",
+      "@type": "sc:Manifest",
+      "label": "1933, Standing Rock, Narrative Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-153-209/manifest",
+      "@type": "sc:Manifest",
+      "label": "1933, Standing Rock, Statistical Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-210-235/manifest",
+      "@type": "sc:Manifest",
+      "label": "1934, Standing Rock, Narrative Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-236-298/manifest",
+      "@type": "sc:Manifest",
+      "label": "1934, Standing Rock, Statistical Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-299-343/manifest",
+      "@type": "sc:Manifest",
+      "label": "1934, Standing Rock, Statistical Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-344-447/manifest",
+      "@type": "sc:Manifest",
+      "label": "1935, Standing Rock, Statistical Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-449-453/manifest",
+      "@type": "sc:Manifest",
+      "label": "1930, Tacoma Hospital - Narrative Report"
+    },
+    {
+      "@id": "https://presley.dlcs-ida.org/iiif/idatest01/_roll_M-1011_145_cvs-454-467/manifest",
+      "@type": "sc:Manifest",
+      "label": "1930 Tacoma Hospital, Statistical Report"
+    }
+  ]
+}

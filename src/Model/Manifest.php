@@ -1,43 +1,52 @@
 <?php
 
-
 namespace IIIF\Model;
-
 
 class Manifest
 {
-    private $label;
-    private $sequences;
-    private $id;
+    protected $label;
+    protected $sequences;
+    protected $id;
+    const TYPE = 'sc:manifest';
 
     public function __construct(
         string $id,
-        string $label,
+        string $label = null,
         array $sequences
-    )
-    {
+    ) {
         $this->label = $label;
         $this->sequences = $sequences;
         $this->id = $id;
     }
 
-    public static function fromJson($json) : self
+    public static function isManifest(array $data)
+    {
+        return strtolower($data['@type']) === self::TYPE;
+    }
+
+    public static function fromArray(array $data): self
+    {
+        return new static(
+            $data['@id'],
+            $data['label'] ?? null,
+            array_map(function ($sequence) {
+                return Sequence::fromArray($sequence);
+            }, $data['sequences'] ?? [])
+        );
+    }
+
+    public static function fromJson(string $json): self
     {
         $data = json_decode($json, true);
 
-        return new static(
-            $data['@id'],
-            $data['label'],
-            array_map(function($sequence) {
-                return Sequence::fromArray($sequence);
-            }, $data['sequences'])
-        );
+        return static::fromArray($data);
     }
 
     public function getCanonicalUrl($uri)
     {
-        $segments = explode('#',$uri);
+        $segments = explode('#', $uri);
         array_pop($segments);
+
         return implode('#', $segments);
     }
 
@@ -49,10 +58,11 @@ class Manifest
             return null;
         }
         $canvas = $this->getCanvas($canonicalUri);
+
         return $canvas->getRegion($region);
     }
 
-    public function getLabel() : string
+    public function getLabel(): string
     {
         return $this->label;
     }
@@ -66,12 +76,12 @@ class Manifest
     {
         $canvases = $this->getSequence($sequenceNum);
 
-        return $canvases->map(function(Canvas $canvas) {
+        return $canvases->map(function (Canvas $canvas) {
             return $canvas->getThumbnail();
         });
     }
 
-    public function getDefaultSequence() : Sequence
+    public function getDefaultSequence(): Sequence
     {
         return $this->sequences[0];
     }
@@ -92,6 +102,6 @@ class Manifest
 
     public function containsCanvas(string $id, int $sequence = 0)
     {
-        return !!$this->getCanvas($id, $sequence);
+        return (bool) $this->getCanvas($id, $sequence);
     }
 }

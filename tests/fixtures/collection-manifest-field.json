@@ -1,0 +1,134 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://dams.llgc.org.uk/iiif/collection/gle.json",
+  "@type": "sc:Collection",
+  "label": [
+    {
+      "@value": "[Trawsfynydd Carnival, Images of O'Brien and John Douglas]",
+      "@language": "en"
+    },
+    {
+      "@value": "",
+      "@language": "cy-GB"
+    }
+  ],
+  "description": "Images of Trawsfynydd Carnival, Images of O'Brien and John Douglas.",
+  "attribution": "Llyfrgell Genedlaethol Cymru – The National Library of Wales",
+  "metadata": [
+    {
+      "label": [
+        {
+          "@value": "Title",
+          "@language": "en"
+        },
+        {
+          "@value": "Teitl",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": [
+        {
+          "@value": "[Trawsfynydd Carnival, Images of O'Brien and John Douglas]",
+          "@language": "en"
+        },
+        {
+          "@value": "",
+          "@language": "cy-GB"
+        }
+      ]
+    },
+    {
+      "label": [
+        {
+          "@value": "Author",
+          "@language": "en"
+        },
+        {
+          "@value": "Awdur",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": "Evans, Gwilym Livingstone photographer."
+    },
+    {
+      "label": [
+        {
+          "@value": "Period",
+          "@language": "en"
+        },
+        {
+          "@value": "Cyfnod",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": "1968."
+    },
+    {
+      "label": [
+        {
+          "@value": "Physical description",
+          "@language": "en"
+        },
+        {
+          "@value": "Disgrifiad ffisegol",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": "24 slides : black and white ; 6 x 6 cm. or smaller."
+    },
+    {
+      "label": [
+        {
+          "@value": "Repository",
+          "@language": "en"
+        },
+        {
+          "@value": "Ystorfa",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": [
+        {
+          "@value": "This content has been digitised by The National Library of Wales",
+          "@language": "en"
+        },
+        {
+          "@value": "Digidwyd y cynnwys hwn gan Lyfrgell Genedlaethol Cymru",
+          "@language": "cy-GB"
+        }
+      ]
+    }
+  ],
+  "manifests": [
+    {
+      "@id": "http://dams.llgc.org.uk/iiif/2.0/4693064/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Contact Sheet 1 Box 1",
+      "description": ""
+    },
+    {
+      "@id": "http://dams.llgc.org.uk/iiif/2.0/4693089/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Contact Sheet 2 Box 1",
+      "description": ""
+    },
+    {
+      "@id": "http://dams.llgc.org.uk/iiif/2.0/4693105/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Contact Sheet 3 Box 1",
+      "description": ""
+    },
+    {
+      "@id": "http://dams.llgc.org.uk/iiif/2.0/4693116/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Contact Sheet 4 Box 1",
+      "description": ""
+    },
+    {
+      "@id": "http://dams.llgc.org.uk/iiif/2.0/4654878/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Contact Sheet 5 Box 1",
+      "description": "Wm. Carey Jones, Isfryn, 4, Gwaenydd Terr. Rhiw-S Snar Traws. Part Marian Bryfdir Wedding."
+    }
+  ]
+}

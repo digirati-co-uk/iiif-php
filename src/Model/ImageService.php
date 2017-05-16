@@ -1,8 +1,6 @@
 <?php
 
-
 namespace IIIF\Model;
-
 
 class ImageService
 {
@@ -17,8 +15,7 @@ class ImageService
         int $height,
         int $width,
         array $tiles = null
-    )
-    {
+    ) {
         $this->tiles = $tiles ? $tiles : [];
         $this->id = $id;
         $this->height = $height;
@@ -51,18 +48,21 @@ class ImageService
                 $largest = $tile->getLargestDimension();
             }
         }
+
         return $largest === 0 ? 256 : $largest;
     }
 
     public function getThumbnail()
     {
         $largestTile = $this->getLargestTile();
-        return $this->id . '/full/' . $largestTile .',' . $largestTile . '/0/default.jpg';
+
+        return $this->id.'/full/'.$largestTile.','.$largestTile.'/0/default.jpg';
     }
 
     public function getRegion(Region $region)
     {
         $largestTile = $this->getLargestTile();
-        return $this->id . '/' . $region->getX() .',' . $region->getY() . ',' . $region->getWidth() . ',' . $region->getHeight(). '/' . $largestTile .',' . $largestTile . '/0/default.jpg';
+
+        return $this->id.'/'.$region->getX().','.$region->getY().','.$region->getWidth().','.$region->getHeight().'/'.$largestTile.','.$largestTile.'/0/default.jpg';
     }
 }
