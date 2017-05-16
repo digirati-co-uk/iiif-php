@@ -1,6 +1,6 @@
 <?php
 
-namespace IIIF\Tests\Model;
+namespace IIIF\Tests\model;
 
 use IIIF\Model\Image;
 use IIIF\Model\LazyManifest;
@@ -12,13 +12,13 @@ class ManifestTest extends TestCase
 {
     public function test_can_construct()
     {
-        $manifest = Manifest::fromJson(file_get_contents(__DIR__ . '/../fixtures/manifest-a.json'));
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'));
         $this->assertInstanceOf(Manifest::class, $manifest);
     }
 
     public function test_can_find_canvas_inside_self()
     {
-        $manifest = Manifest::fromJson(file_get_contents(__DIR__ . '/../fixtures/manifest-a.json'));
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'));
         $canvas = $manifest->containsCanvas('http://dams.llgc.org.uk/iiif/2.0/4654878/canvas/4654882.json');
         $this->assertTrue($canvas);
 
@@ -32,7 +32,7 @@ class ManifestTest extends TestCase
 
     public function test_can_get_thumbnails()
     {
-        $manifest = Manifest::fromJson(file_get_contents(__DIR__ . '/../fixtures/manifest-a.json'));
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'));
         $thumbnails = $manifest->getThumbnails();
         $this->assertNotEmpty($thumbnails);
     }
@@ -66,14 +66,14 @@ class ManifestTest extends TestCase
 
     public function test_region_image()
     {
-        $manifest = Manifest::fromJson(file_get_contents(__DIR__ . '/../fixtures/manifest-a.json'));
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'));
         $imageUrl = $manifest->getCanvasRegionFromUrl('http://dams.llgc.org.uk/iiif/2.0/4654878/canvas/4654882.json#xywh=pixel:478,1329,146,38');
         $this->assertEquals('http://dams.llgc.org.uk/iiif/2.0/image/4654882/478,1329,146,38/256,256/0/default.jpg', $imageUrl);
     }
 
     public function test_manifest_without_image_service()
     {
-        $manifest = Manifest::fromJson(file_get_contents(__DIR__ . '/../fixtures/manifest-b.json'));
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-b.json'));
         $thumbnails = $manifest->getThumbnails();
         $this->assertNotEmpty($thumbnails);
 
@@ -87,26 +87,36 @@ class ManifestTest extends TestCase
 
     public function test_is_manifest()
     {
-        $manifest1 = json_decode(file_get_contents(__DIR__ . '/../fixtures/manifest-a.json'), true);
+        $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);
         $this->assertTrue(Manifest::isManifest($manifest1));
 
-        $manifest2 = json_decode(file_get_contents(__DIR__ . '/../fixtures/manifest-b.json'), true);
+        $manifest2 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-b.json'), true);
         $this->assertTrue(Manifest::isManifest($manifest2));
 
-        $collection1 = json_decode(file_get_contents(__DIR__ . '/../fixtures/collection-member-field.json'), true);
+        $collection1 = json_decode(file_get_contents(__DIR__.'/../fixtures/collection-member-field.json'), true);
         $this->assertFalse(Manifest::isManifest($collection1));
 
-        $collection2 = json_decode(file_get_contents(__DIR__ . '/../fixtures/collection-manifest-field.json'), true);
+        $collection2 = json_decode(file_get_contents(__DIR__.'/../fixtures/collection-manifest-field.json'), true);
         $this->assertFalse(Manifest::isManifest($collection2));
     }
 
     public function test_lazy_manifest()
     {
         $manifest = LazyManifest::fromArray([
-            '@id' => __DIR__ . '/../fixtures/manifest-a.json'
+            '@id' => __DIR__.'/../fixtures/manifest-a.json',
         ]);
         $thumbnails = $manifest->getThumbnails();
         $this->assertNotEmpty($thumbnails);
     }
 
+    public function test_manifest_get_id()
+    {
+        $id = __DIR__.'/../fixtures/manifest-a.json';
+
+        $manifest = LazyManifest::fromArray([
+            '@id' => $id,
+        ]);
+
+        $this->assertEquals($id, $manifest->getId());
+    }
 }

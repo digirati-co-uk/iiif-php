@@ -76,6 +76,11 @@ class Collection
         return $this->manifests;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public static function fromArray(array $data)
     {
         return new static(
