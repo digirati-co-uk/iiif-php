@@ -17,7 +17,6 @@ class Canvas
 
     public function __construct(string $id, string $label, string $thumbnail = null, int $height, int $width, array $images)
     {
-
         $this->label = $label;
         $this->height = $height;
         $this->width = $width;
@@ -40,6 +39,7 @@ class Canvas
     public function getRegion(Region $region, $num = 0)
     {
         $image = $this->getImage($num);
+
         return $image->getImageService()->getRegion($region);
     }
 
@@ -48,6 +48,7 @@ class Canvas
         if ($this->thumbnail) {
             return $this->thumbnail;
         }
+
         return $this->getImage()->getThumbnail();
     }
 
@@ -62,12 +63,13 @@ class Canvas
         if (isset($thumbnail['@id'])) {
             return $thumbnail['@id'];
         }
+
         return null;
     }
 
     public static function fromArray($canvas)
     {
-        $images = array_map(function($image) {
+        $images = array_map(function ($image) {
             return Image::fromArray($image);
         }, $canvas['images']);
 

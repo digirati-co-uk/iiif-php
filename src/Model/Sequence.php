@@ -13,8 +13,9 @@ class Sequence
         $this->label = $label;
     }
 
-    public static function fromArray(array $sequence) {
-        $canvases = array_map(function($canvas) {
+    public static function fromArray(array $sequence)
+    {
+        $canvases = array_map(function ($canvas) {
             return Canvas::fromArray($canvas);
         }, $sequence['canvases']);
 
@@ -41,7 +42,7 @@ class Sequence
                 return $canvas;
             }
         }
+
         return null;
     }
-
 }

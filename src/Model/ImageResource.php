@@ -18,8 +18,7 @@ class ImageResource
         int $height,
         int $width,
         ImageService $service = null
-    )
-    {
+    ) {
         $this->service = $service;
         $this->id = $id;
         $this->type = $type;

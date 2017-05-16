@@ -3,6 +3,7 @@
 namespace IIIF\Tests\Model;
 
 use IIIF\Model\Image;
+use IIIF\Model\LazyManifest;
 use IIIF\Model\Manifest;
 use IIIF\Model\Region;
 use PHPUnit\Framework\TestCase;
@@ -82,6 +83,30 @@ class ManifestTest extends TestCase
         $firstImage = $images[0];
         $url = $firstImage->getImageService()->getRegion(Region::create(500, 500, 50, 50));
         $this->assertEquals('https://dlcs-ida.org/iiif-img/2/1/M-1473_R-18_0003/500,500,50,50/256,256/0/default.jpg', $url);
+    }
+
+    public function test_is_manifest()
+    {
+        $manifest1 = json_decode(file_get_contents(__DIR__ . '/../fixtures/manifest-a.json'), true);
+        $this->assertTrue(Manifest::isManifest($manifest1));
+
+        $manifest2 = json_decode(file_get_contents(__DIR__ . '/../fixtures/manifest-b.json'), true);
+        $this->assertTrue(Manifest::isManifest($manifest2));
+
+        $collection1 = json_decode(file_get_contents(__DIR__ . '/../fixtures/collection-member-field.json'), true);
+        $this->assertFalse(Manifest::isManifest($collection1));
+
+        $collection2 = json_decode(file_get_contents(__DIR__ . '/../fixtures/collection-manifest-field.json'), true);
+        $this->assertFalse(Manifest::isManifest($collection2));
+    }
+
+    public function test_lazy_manifest()
+    {
+        $manifest = LazyManifest::fromArray([
+            '@id' => __DIR__ . '/../fixtures/manifest-a.json'
+        ]);
+        $thumbnails = $manifest->getThumbnails();
+        $this->assertNotEmpty($thumbnails);
     }
 
 }

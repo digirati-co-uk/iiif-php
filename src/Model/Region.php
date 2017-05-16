@@ -1,8 +1,6 @@
 <?php
 
-
 namespace IIIF\Model;
-
 
 class Region
 {
@@ -62,6 +60,7 @@ class Region
     {
         $matches = [];
         preg_match(self::W3C_REGEX, $url, $matches);
+
         return new static(
             $matches[1] ? $matches[1] : 'pixel',
             $matches[2] ?? 0,
@@ -81,5 +80,4 @@ class Region
             $w
         );
     }
-
 }
