@@ -38,11 +38,21 @@ class LazyManifest extends Manifest
         }
         $loader = $this->loader;
         $data = $loader($this->id);
+        $this->id = $data['id'] ?? $this->id;
         $this->label = $data['label'] ?? null;
         $this->sequences = array_map(function ($sequence) {
             return Sequence::fromArray($sequence);
         }, $data['sequences'] ?? []);
         $this->isLoaded = true;
+    }
+
+    public function getId($force = true)
+    {
+        if ($force) {
+            $this->load();
+        }
+
+        return parent::getId();
     }
 
     public function getLabel(): string

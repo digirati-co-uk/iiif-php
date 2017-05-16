@@ -19,6 +19,11 @@ class Manifest
         $this->id = $id;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public static function isManifest(array $data)
     {
         return strtolower($data['@type']) === self::TYPE;
