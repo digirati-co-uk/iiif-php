@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Sequence
 {
+    use WithMetaData;
+
     private $label;
     private $canvases;
 

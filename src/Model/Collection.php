@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Collection
 {
+    use WithMetaData;
+
     private $id;
     private $manifests;
     private $label;

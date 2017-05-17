@@ -126,4 +126,24 @@ class ManifestTest extends TestCase
 
         $this->assertEquals($id, $manifest->getId());
     }
+
+    public function test_manifest_with_meta_data()
+    {
+        $manifest = Manifest::fromArray(['@id' => '1234']);
+        $manifestWithThumbnails = $manifest->withMetaData([
+            'thumbnails' => 'I AM THUMBNAILS'
+        ]);
+
+        $this->assertNotEquals($manifest, $manifestWithThumbnails);
+
+        $this->assertNull($manifest->thumbnails);
+        $this->assertEquals('I AM THUMBNAILS', $manifestWithThumbnails->thumbnails);
+
+        $manifest = Manifest::fromArray(['@id' => '1234']);
+        $manifest->addMetaData([
+            'thumbnails' => 'I AM THUMBNAILS ALSO'
+        ]);
+
+        $this->assertEquals('I AM THUMBNAILS ALSO', $manifest->thumbnails);
+    }
 }

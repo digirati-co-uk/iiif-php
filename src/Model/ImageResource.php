@@ -4,6 +4,7 @@ namespace IIIF\Model;
 
 class ImageResource
 {
+    use WithMetaData;
     private $service;
     private $id;
     private $type;

@@ -4,11 +4,14 @@ namespace IIIF\Model;
 
 class Canvas
 {
+    use WithMetaData;
+
     private $id;
     private $label;
     private $height;
     private $width;
     protected $images;
+
 
     public function getId()
     {

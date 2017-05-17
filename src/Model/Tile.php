@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Tile
 {
+    use WithMetaData;
+
     private $width;
     private $height;
     private $scaleFactors;

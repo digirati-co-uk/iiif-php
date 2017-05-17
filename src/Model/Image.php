@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Image
 {
+    use WithMetaData;
+
     protected $resource;
     private $id;
     private $motivation;

@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Manifest
 {
+    use WithMetaData;
+
     protected $label;
     protected $sequences;
     protected $id;
