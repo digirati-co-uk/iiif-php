@@ -4,6 +4,7 @@ namespace IIIF\tests\model;
 
 use IIIF\Model\Collection;
 use IIIF\Model\LazyManifest;
+use IIIF\ResourceFactory;
 use PHPUnit\Framework\TestCase;
 
 class CollectionTest extends TestCase
@@ -43,5 +44,21 @@ class CollectionTest extends TestCase
 
         $manifest2 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-b.json'), true);
         $this->assertFalse(Collection::isCollection($manifest2));
+    }
+
+    public function test_creation_using_factory()
+    {
+        $collection1 = json_decode(file_get_contents(__DIR__.'/../fixtures/collection-member-field.json'), true);
+        $collection = ResourceFactory::createCollection($collection1);
+        $this->assertInstanceOf(Collection::class, $collection);
+
+        $collection1 = json_decode(file_get_contents(__DIR__.'/../fixtures/collection-member-field.json'), true);
+        $collection = ResourceFactory::create($collection1);
+        $this->assertInstanceOf(Collection::class, $collection);
+
+        $collection = ResourceFactory::create(__DIR__.'/../fixtures/collection-member-field.json', function ($file) {
+            return json_decode(file_get_contents($file), true);
+        });
+        $this->assertInstanceOf(Collection::class, $collection);
     }
 }

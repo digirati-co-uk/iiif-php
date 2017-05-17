@@ -6,6 +6,7 @@ use IIIF\Model\Image;
 use IIIF\Model\LazyManifest;
 use IIIF\Model\Manifest;
 use IIIF\Model\Region;
+use IIIF\ResourceFactory;
 use PHPUnit\Framework\TestCase;
 
 class ManifestTest extends TestCase
@@ -145,5 +146,21 @@ class ManifestTest extends TestCase
         ]);
 
         $this->assertEquals('I AM THUMBNAILS ALSO', $manifest->thumbnails);
+    }
+
+    public function test_creation_using_factory()
+    {
+        $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);
+        $manifest = ResourceFactory::createManifest($manifest1);
+        $this->assertInstanceOf(Manifest::class, $manifest);
+
+        $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);
+        $manifest = ResourceFactory::create($manifest1);
+        $this->assertInstanceOf(Manifest::class, $manifest);
+
+        $manifest = ResourceFactory::create(__DIR__.'/../fixtures/manifest-a.json', function ($file) {
+            return json_decode(file_get_contents($file), true);
+        });
+        $this->assertInstanceOf(Manifest::class, $manifest);
     }
 }
