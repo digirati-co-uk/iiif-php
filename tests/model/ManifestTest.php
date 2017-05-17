@@ -85,6 +85,13 @@ class ManifestTest extends TestCase
         $this->assertEquals('https://dlcs-ida.org/iiif-img/2/1/M-1473_R-18_0003/500,500,50,50/256,256/0/default.jpg', $url);
     }
 
+    public function test_manifest_getting_all_canvases()
+    {
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-b.json'));
+        $thumbnails = $manifest->getCanvases();
+        $this->assertNotEmpty($thumbnails);
+    }
+
     public function test_is_manifest()
     {
         $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);

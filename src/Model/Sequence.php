@@ -25,6 +25,11 @@ class Sequence
         );
     }
 
+    public function getCanvases()
+    {
+        return $this->canvases;
+    }
+
     public function get(int $num) : Canvas
     {
         return $this->canvases[$num] ?? null;

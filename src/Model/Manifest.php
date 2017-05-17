@@ -77,6 +77,11 @@ class Manifest
         return $this->getDefaultSequence()->get($num);
     }
 
+    public function getCanvases($fromSequence = 0)
+    {
+        return $this->getSequence($fromSequence)->getCanvases();
+    }
+
     public function getThumbnails($sequenceNum = 0)
     {
         $canvases = $this->getSequence($sequenceNum);
