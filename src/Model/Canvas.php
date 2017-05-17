@@ -12,7 +12,6 @@ class Canvas
     private $width;
     protected $images;
 
-
     public function getId()
     {
         return $this->id;

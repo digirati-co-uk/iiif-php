@@ -18,6 +18,7 @@ trait WithMetaData
     public function addMetaData($metaData)
     {
         $this->metaData = $metaData;
+
         return $this;
     }
 
@@ -25,6 +26,7 @@ trait WithMetaData
     {
         $model = clone $this;
         $model->metaData = $metaData;
+
         return $model;
     }
 }

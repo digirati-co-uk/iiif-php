@@ -131,7 +131,7 @@ class ManifestTest extends TestCase
     {
         $manifest = Manifest::fromArray(['@id' => '1234']);
         $manifestWithThumbnails = $manifest->withMetaData([
-            'thumbnails' => 'I AM THUMBNAILS'
+            'thumbnails' => 'I AM THUMBNAILS',
         ]);
 
         $this->assertNotEquals($manifest, $manifestWithThumbnails);
@@ -141,7 +141,7 @@ class ManifestTest extends TestCase
 
         $manifest = Manifest::fromArray(['@id' => '1234']);
         $manifest->addMetaData([
-            'thumbnails' => 'I AM THUMBNAILS ALSO'
+            'thumbnails' => 'I AM THUMBNAILS ALSO',
         ]);
 
         $this->assertEquals('I AM THUMBNAILS ALSO', $manifest->thumbnails);
