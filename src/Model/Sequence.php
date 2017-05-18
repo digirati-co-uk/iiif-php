@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Sequence
 {
+    use WithMetaData;
+
     private $label;
     private $canvases;
 
@@ -23,6 +25,11 @@ class Sequence
             $sequence['label'],
             $canvases
         );
+    }
+
+    public function getCanvases()
+    {
+        return $this->canvases;
     }
 
     public function get(int $num) : Canvas

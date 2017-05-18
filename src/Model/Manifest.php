@@ -4,6 +4,8 @@ namespace IIIF\Model;
 
 class Manifest
 {
+    use WithMetaData;
+
     protected $label;
     protected $sequences;
     protected $id;
@@ -75,6 +77,11 @@ class Manifest
     public function getCanvasNumber($num = 0)
     {
         return $this->getDefaultSequence()->get($num);
+    }
+
+    public function getCanvases($fromSequence = 0)
+    {
+        return $this->getSequence($fromSequence)->getCanvases();
     }
 
     public function getThumbnails($sequenceNum = 0)

@@ -6,6 +6,7 @@ use IIIF\Model\Image;
 use IIIF\Model\LazyManifest;
 use IIIF\Model\Manifest;
 use IIIF\Model\Region;
+use IIIF\ResourceFactory;
 use PHPUnit\Framework\TestCase;
 
 class ManifestTest extends TestCase
@@ -85,6 +86,13 @@ class ManifestTest extends TestCase
         $this->assertEquals('https://dlcs-ida.org/iiif-img/2/1/M-1473_R-18_0003/500,500,50,50/256,256/0/default.jpg', $url);
     }
 
+    public function test_manifest_getting_all_canvases()
+    {
+        $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-b.json'));
+        $thumbnails = $manifest->getCanvases();
+        $this->assertNotEmpty($thumbnails);
+    }
+
     public function test_is_manifest()
     {
         $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);
@@ -118,5 +126,41 @@ class ManifestTest extends TestCase
         ]);
 
         $this->assertEquals($id, $manifest->getId());
+    }
+
+    public function test_manifest_with_meta_data()
+    {
+        $manifest = Manifest::fromArray(['@id' => '1234']);
+        $manifestWithThumbnails = $manifest->withMetaData([
+            'thumbnails' => 'I AM THUMBNAILS',
+        ]);
+
+        $this->assertNotEquals($manifest, $manifestWithThumbnails);
+
+        $this->assertNull($manifest->thumbnails);
+        $this->assertEquals('I AM THUMBNAILS', $manifestWithThumbnails->thumbnails);
+
+        $manifest = Manifest::fromArray(['@id' => '1234']);
+        $manifest->addMetaData([
+            'thumbnails' => 'I AM THUMBNAILS ALSO',
+        ]);
+
+        $this->assertEquals('I AM THUMBNAILS ALSO', $manifest->thumbnails);
+    }
+
+    public function test_creation_using_factory()
+    {
+        $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);
+        $manifest = ResourceFactory::createManifest($manifest1);
+        $this->assertInstanceOf(Manifest::class, $manifest);
+
+        $manifest1 = json_decode(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'), true);
+        $manifest = ResourceFactory::create($manifest1);
+        $this->assertInstanceOf(Manifest::class, $manifest);
+
+        $manifest = ResourceFactory::create(__DIR__.'/../fixtures/manifest-a.json', function ($file) {
+            return json_decode(file_get_contents($file), true);
+        });
+        $this->assertInstanceOf(Manifest::class, $manifest);
     }
 }

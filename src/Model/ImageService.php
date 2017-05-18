@@ -4,6 +4,7 @@ namespace IIIF\Model;
 
 class ImageService
 {
+    use WithMetaData;
     /** @var array<Tile> */
     private $tiles;
     private $id;

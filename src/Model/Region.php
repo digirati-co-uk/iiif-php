@@ -4,25 +4,12 @@ namespace IIIF\Model;
 
 class Region
 {
-    /**
-     * @var string
-     */
+    use WithMetaData;
+
     private $unit;
-    /**
-     * @var int
-     */
     private $x;
-    /**
-     * @var int
-     */
     private $y;
-    /**
-     * @var int
-     */
     private $width;
-    /**
-     * @var int
-     */
     private $height;
 
     public function __construct(string $unit, int $x, int $y, int $width, int $height)
