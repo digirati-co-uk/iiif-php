@@ -23,17 +23,26 @@ trait WithMetaData
         return null;
     }
 
+    public function getMetaData() : array
+    {
+        return $this->metaData && is_array($this->metaData) ? $this->metaData : [];
+    }
+
     public function addMetaData($metaData)
     {
-        $this->metaData = $metaData;
+        foreach ($metaData as $name => $value) {
+            $this->metaData[$name] = $value;
+        }
 
         return $this;
     }
 
-    public function withMetaData($metaData)
+    public function withMetaData($metaData, $merge = true)
     {
         $model = clone $this;
-        $model->metaData = $metaData;
+        $model->metaData = $merge ?
+            array_merge($this->getMetaData(), $metaData) :
+            $metaData;
 
         return $model;
     }
