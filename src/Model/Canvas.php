@@ -11,11 +11,7 @@ class Canvas
     private $height;
     private $width;
     protected $images;
-
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $thumbnail;
 
     public function __construct(string $id, string $label, string $thumbnail = null, int $height, int $width, array $images)
     {
@@ -25,6 +21,26 @@ class Canvas
         $this->images = $images;
         $this->thumbnail = $thumbnail;
         $this->id = $id;
+    }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    public function getHeight()
+    {
+        return $this->height;
+    }
+
+    public function getWidth()
+    {
+        return $this->width;
     }
 
     public function getImages() : array
