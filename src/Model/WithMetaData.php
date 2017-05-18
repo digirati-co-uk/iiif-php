@@ -6,6 +6,14 @@ trait WithMetaData
 {
     protected $metaData = [];
 
+    /**
+     * This is required for twig templates since they do not support get.
+     */
+    public function __call($name, $arguments)
+    {
+        return $this->__get($name);
+    }
+
     public function __get($name)
     {
         if (isset($this->metaData[$name])) {

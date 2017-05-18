@@ -146,6 +146,7 @@ class ManifestTest extends TestCase
         ]);
 
         $this->assertEquals('I AM THUMBNAILS ALSO', $manifest->thumbnails);
+        $this->assertEquals('I AM THUMBNAILS ALSO', $manifest->thumbnails());
     }
 
     public function test_creation_using_factory()
