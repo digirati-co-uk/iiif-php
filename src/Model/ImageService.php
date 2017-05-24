@@ -57,13 +57,13 @@ class ImageService
     {
         $largestTile = $this->getLargestTile();
 
-        return $this->id.'/full/'.$largestTile.','.$largestTile.'/0/default.jpg';
+        return $this->id.'/full/'.$largestTile.',/0/default.jpg';
     }
 
     public function getRegion(Region $region)
     {
         $largestTile = $this->getLargestTile();
 
-        return $this->id.'/'.$region->getX().','.$region->getY().','.$region->getWidth().','.$region->getHeight().'/'.$largestTile.','.$largestTile.'/0/default.jpg';
+        return $this->id.'/'.$region->getX().','.$region->getY().','.$region->getWidth().','.$region->getHeight().'/'.$largestTile.',/0/default.jpg';
     }
 }
