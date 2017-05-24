@@ -69,7 +69,7 @@ class ManifestTest extends TestCase
     {
         $manifest = Manifest::fromJson(file_get_contents(__DIR__.'/../fixtures/manifest-a.json'));
         $imageUrl = $manifest->getCanvasRegionFromUrl('http://dams.llgc.org.uk/iiif/2.0/4654878/canvas/4654882.json#xywh=pixel:478,1329,146,38');
-        $this->assertEquals('http://dams.llgc.org.uk/iiif/2.0/image/4654882/478,1329,146,38/256,256/0/default.jpg', $imageUrl);
+        $this->assertEquals('http://dams.llgc.org.uk/iiif/2.0/image/4654882/478,1329,146,38/256,/0/default.jpg', $imageUrl);
     }
 
     public function test_manifest_without_image_service()
@@ -83,7 +83,7 @@ class ManifestTest extends TestCase
         /** @var Image $firstImage */
         $firstImage = $images[0];
         $url = $firstImage->getImageService()->getRegion(Region::create(500, 500, 50, 50));
-        $this->assertEquals('https://dlcs-ida.org/iiif-img/2/1/M-1473_R-18_0003/500,500,50,50/256,256/0/default.jpg', $url);
+        $this->assertEquals('https://dlcs-ida.org/iiif-img/2/1/M-1473_R-18_0003/500,500,50,50/256,/0/default.jpg', $url);
     }
 
     public function test_manifest_getting_all_canvases()
