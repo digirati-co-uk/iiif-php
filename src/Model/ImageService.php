@@ -35,6 +35,11 @@ class ImageService
         );
     }
 
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
     public function getTile(int $num)
     {
         return $this->tiles[$num];
