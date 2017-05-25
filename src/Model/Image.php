@@ -33,6 +33,21 @@ class Image
         );
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getMotivation()
+    {
+        return $this->motivation;
+    }
+
+    public function getOn()
+    {
+        return $this->on;
+    }
+
     public function getImageService(): ImageService
     {
         return $this->resource->getService();
