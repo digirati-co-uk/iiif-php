@@ -33,9 +33,9 @@ class Image
         );
     }
 
-    public function getId()
+    public function getId(): string
     {
-        return $this->id;
+        return $this->id ? $this->id : $this->getImageService()->getId();
     }
 
     public function getMotivation()
