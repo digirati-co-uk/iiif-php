@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b29357998/manifest",
+  "@type": "sc:Manifest",
+  "label": "Caricatural Mediaeval / Renaissance medical practitioners.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Caricatural Mediaeval / Renaissance medical practitioners."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Kuijper, Madeleine; Madeleine Kuijper Illustraties; Wellcome Images"
+    },
+    {
+      "label": "Description",
+      "value": "Four scenes of caricatural Mediaeval/Renaissance medical practitioners, digital illustration.  <p>This illustration is inspired by works of mediaeval artists and Dutch 15th century Master-painter Jheronimus Bosch. Each of the four scenes is separated by Aesculapian snakes, referring to the staff of Aesculapius (also known as Asclepius), the God of medicine in ancient Greek mythology. The staff and snakes can also be seen in the modern day medicine symbol. <p>Imaging technique: inkdrawing, digitally colored. Scale: 25.9 x 22 cm (L x W)\n\nDescriptions of the images (clockwise, from top left): <p>1) A parody on the practise of alchemy, a masked bird-like figure holds a conical flask in his hand from which frogs jump out. In the distance a heron waits for his chance to grab one.  <p>2) A poor man sits on a cart in a medieval town square. With his limbs out of place and holding his head in his hands, he appears to be asking a doctor if things can be repaired. On the right a doctor with a bird-mask ponders the situation. Further away some surprised town-folk and a Pinocchio-like figure with a broken leg comes hobbling closer.  <p>3) In another operation scene, the doctor appears to be pulling a bunch of sausages out of a patient's belly, whilst a hurdle of hungry dogs surrounds them.  <p>4) A mediaeval surgeon holding a small knife is operating in a sitting mańs opened head. In the meanwhile the patient is being attended to by a female assistant of the doctor, who is giving him some tea."
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY-NC"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb2935799'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b29357998",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b29357998.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b29357998",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b29357998",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b29357998-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b29357998",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b29357998, Digicode: digbiomed, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b29357998/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b29357998/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b29357998/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/73ebe57c-26f0-4d02-bf54-177bc22055b8/full/85,100/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/73ebe57c-26f0-4d02-bf54-177bc22055b8",
+              "protocol": "http://iiif.io/api/image",
+              "height": 1024,
+              "width": 869,
+              "sizes": [
+                {
+                  "width": 85,
+                  "height": 100
+                },
+                {
+                  "width": 170,
+                  "height": 200
+                },
+                {
+                  "width": 339,
+                  "height": 400
+                },
+                {
+                  "width": 869,
+                  "height": 1024
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 3157,
+          "width": 2678,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b29357998/imageanno/73ebe57c-26f0-4d02-bf54-177bc22055b8",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/73ebe57c-26f0-4d02-bf54-177bc22055b8/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 869,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/73ebe57c-26f0-4d02-bf54-177bc22055b8",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b29357998/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b11944377/manifest",
+  "@type": "sc:Manifest",
+  "label": "Two young men are approached by a prostitute: she is a clothed skeleton holding a made-up mask in front of her face, representing syphilis. Lithograph by J.J. Grandville, 1830.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Two young men are approached by a prostitute: she is a clothed skeleton holding a made-up mask in front of her face, representing syphilis. Lithograph by J.J. Grandville, 1830."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Grandville, J. J; Langlumé, Pierre"
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY-NC"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1194437'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b11944377",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b11944377.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b11944377",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b11944377",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11944377-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11944377",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11944377, Digicode: digicon, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b11944377/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b11944377/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b11944377/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/1ead647d-03be-48a7-88cc-43debcc75281/full/100,78/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/1ead647d-03be-48a7-88cc-43debcc75281",
+              "protocol": "http://iiif.io/api/image",
+              "height": 797,
+              "width": 1024,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 78
+                },
+                {
+                  "width": 200,
+                  "height": 156
+                },
+                {
+                  "width": 400,
+                  "height": 311
+                },
+                {
+                  "width": 1024,
+                  "height": 797
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 2343,
+          "width": 3011,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b11944377/imageanno/1ead647d-03be-48a7-88cc-43debcc75281",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/1ead647d-03be-48a7-88cc-43debcc75281/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 797,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/1ead647d-03be-48a7-88cc-43debcc75281",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b11944377/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

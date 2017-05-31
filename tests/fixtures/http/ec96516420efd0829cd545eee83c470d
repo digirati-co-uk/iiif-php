@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b11855757/manifest",
+  "@type": "sc:Manifest",
+  "label": "Phrenological head of Lord Ellenborough as Governor General of India 1841-1844. Lithograph, ca. 1844.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Phrenological head of Lord Ellenborough as Governor General of India 1841-1844. Lithograph, ca. 1844."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Follit, J"
+    },
+    {
+      "label": "Description",
+      "value": "The lettering refers to the phrenological organ allocated to each section of the head. 1. Weight: Ellenborough carries a door marked 'Samnouth', i.e. the gates of the temple of Somnāth in Gujarat, which he brought back from Afghanistan, reversing the Afghan policy of his predecessor Lord Auckland (hence \"aukward in the lettering\"). 2. Ideality: wearing civilian clothes, he looks into a mirror and sees himself as a soldier in uniform. 3. Locality: on receiving his recall from India, he sobs into a handkerchief, a scroll marked \"Recall\" lies on the ground. 4. Veneration: he worships a statue of a Hindu deity. 5. Comparison: Ellenborough facing in opposite directions, on the left holding a scroll saying \"The insults of a thousand years are avenged\", on the right holding one saying \"The misgovernment of two years is avenged: \". 6. Acquisitiveness: he presides over a coffer stuffed with coins, inscribed \"Gwalior\", referring to Ellenborough's seizure of the state of Gwalior in December 1843. 7. Secretiveness: Ellenborough is manacled with a big padlock, referring to control of his reputation; the lettering, \"Lock; on the understanding\", refers to John Locke's An essay concerning human understanding. 8. Combativeness: the government on the left and the directors of the East India Company on the right try to pull Ellenborough in their direction. 9. Language: Ellenborough writes a dispatch \"I came, I saw, I conqured [sic]\". The last organ is \"Unascertained\", numbered \"?\", and the unascertained question is \"Whether his appointment took place after dinner, or not-\""
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1185575'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons, Attribution license</a>.<br/><br/>This licence permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b11855757",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b11855757.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b11855757",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b11855757",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11855757-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11855757",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11855757, Digicode: digrr, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b11855757/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b11855757/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b11855757/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/ffe0f698-0d17-4a3f-b52f-96ff136a272e/full/73,100/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/ffe0f698-0d17-4a3f-b52f-96ff136a272e",
+              "protocol": "http://iiif.io/api/image",
+              "height": 1024,
+              "width": 749,
+              "sizes": [
+                {
+                  "width": 73,
+                  "height": 100
+                },
+                {
+                  "width": 146,
+                  "height": 200
+                },
+                {
+                  "width": 293,
+                  "height": 400
+                },
+                {
+                  "width": 749,
+                  "height": 1024
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 7828,
+          "width": 5728,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b11855757/imageanno/ffe0f698-0d17-4a3f-b52f-96ff136a272e",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/ffe0f698-0d17-4a3f-b52f-96ff136a272e/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 749,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/ffe0f698-0d17-4a3f-b52f-96ff136a272e",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b11855757/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

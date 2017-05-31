@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b11603458/manifest",
+  "@type": "sc:Manifest",
+  "label": "William Pitt the younger and his ministers as anatomists dissecting the body of the Prince of Wales; representing Pitt's reduction of the powers of the regent. Coloured etching by Thomas Rowlandson, 1788/1789.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "William Pitt the younger and his ministers as anatomists dissecting the body of the Prince of Wales; representing Pitt's reduction of the powers of the regent. Coloured etching by Thomas Rowlandson, 1788/1789."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Rowlandson, Thomas"
+    },
+    {
+      "label": "Description",
+      "value": "In November 1788 King George III experienced a bout of mental illness, and the Government, under William Pitt the Younger, had to make arrangements for the Prince of Wales to rule as regent. The problem for Pitt was that the Prince of Wales was an ally of Pitt's opponent Charles James Fox. Pitt set up committees to scrutinize the medical reports on the king, and after some delay produced a Regency Bill with reduced powers for the Regent. The print shows Pitt and his colleagues as anatomists cutting the Prince of Wales down to size and extracting his heart in order to make him less popular as regent. The six Ministry members shown are (left to right) Richmond, Grafton, Pitt, Townshend, Dundas, and Thurlow. Pitt sits on the red and gold seat in the centre directing the dissection.  The Lord Chancellor Lord Thurlow, shown in black on the right, was secretly negotiating with Fox to retain the Chancellorship when the Prince of Wales took over. In the end the King recovered his health in February 1789, and the regency was postponed\n\nPitt says to Dundas: \"The good qualities of his heart will certainly ruin our plan therefore cut that out first.\", holding out a paper which reads: \"Thanks from the City of London with £50000\""
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY-NC"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1160345'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b11603458",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b11603458.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b11603458",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b11603458",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11603458-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11603458",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11603458, Digicode: digicon, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b11603458/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b11603458/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b11603458/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/5a3e66bd-8a05-4cc1-b01c-fe0b0c3ddc95/full/100,73/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/5a3e66bd-8a05-4cc1-b01c-fe0b0c3ddc95",
+              "protocol": "http://iiif.io/api/image",
+              "height": 749,
+              "width": 1024,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 73
+                },
+                {
+                  "width": 200,
+                  "height": 146
+                },
+                {
+                  "width": 400,
+                  "height": 293
+                },
+                {
+                  "width": 1024,
+                  "height": 749
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 2332,
+          "width": 3189,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b11603458/imageanno/5a3e66bd-8a05-4cc1-b01c-fe0b0c3ddc95",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/5a3e66bd-8a05-4cc1-b01c-fe0b0c3ddc95/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 749,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/5a3e66bd-8a05-4cc1-b01c-fe0b0c3ddc95",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b11603458/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

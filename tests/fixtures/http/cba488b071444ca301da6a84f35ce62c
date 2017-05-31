@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b15751697/manifest",
+  "@type": "sc:Manifest",
+  "label": "An ape in military attire, sitting astride a hog, confronts a baboon, also in military attire, who sits astride a bear. Engraving by F. Barlow, ca. 1679/1680.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "An ape in military attire, sitting astride a hog, confronts a baboon, also in military attire, who sits astride a bear. Engraving by F. Barlow, ca. 1679/1680."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Barlow, Francis"
+    },
+    {
+      "label": "Description",
+      "value": "The animals are assisted by two further apes by their sides.  A woodcock and an owl mark the battle with the sound of their horns"
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY-NC"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1575169'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b15751697",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b15751697.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b15751697",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b15751697",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b15751697-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b15751697",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b15751697, Digicode: digicon, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b15751697/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b15751697/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b15751697/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/3a03a4c0-8ca1-474a-aea4-25d768fc42df/full/100,80/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/3a03a4c0-8ca1-474a-aea4-25d768fc42df",
+              "protocol": "http://iiif.io/api/image",
+              "height": 818,
+              "width": 1024,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 80
+                },
+                {
+                  "width": 200,
+                  "height": 160
+                },
+                {
+                  "width": 400,
+                  "height": 319
+                },
+                {
+                  "width": 1024,
+                  "height": 818
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 2664,
+          "width": 3336,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b15751697/imageanno/3a03a4c0-8ca1-474a-aea4-25d768fc42df",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/3a03a4c0-8ca1-474a-aea4-25d768fc42df/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 818,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/3a03a4c0-8ca1-474a-aea4-25d768fc42df",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b15751697/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

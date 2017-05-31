@@ -30,13 +30,17 @@ class ImageResource
 
     public static function fromArray($resource) : self
     {
+        $service = $resource['service'];
+        $service['width'] = $service['width'] ?? $resource['width'];
+        $service['height'] = $service['height'] ?? $resource['height'];
+
         return new static(
             $resource['@id'],
             $resource['@type'] ?? null,
             $resource['format'] ?? null,
             $resource['height'] ?? 0,
             $resource['width'] ?? 0,
-            isset($resource['service']) ? ImageService::fromArray($resource['service']) : null
+            isset($resource['service']) ? ImageService::fromArray($service) : null
         );
     }
 
