@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b11835151/manifest",
+  "@type": "sc:Manifest",
+  "label": "A nightwatchman disturbs a body-snatcher who has dropped the stolen corpse he had been carrying in a hamper, while the anatomist runs away. Etching with engraving by W. Austin, 1773.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "A nightwatchman disturbs a body-snatcher who has dropped the stolen corpse he had been carrying in a hamper, while the anatomist runs away. Etching with engraving by W. Austin, 1773."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Austin, William"
+    },
+    {
+      "label": "Description",
+      "value": "A nightwatchman, carrying a large lantern, has seized the body-snatcher by the shoulder and sounds a rattle in his raised right hand. A female corpse in its burial shroud falls out of the hamper in which it had been carried before being dropped. The body-snatcher tries to pass on the blame by pointing to the fleeing anatomist, who runs away to the right with a skull in the crook of his arm\n\nThe rise of private anatomy schools in eighteenth-century London saw an increase in the demand for cadavers for dissection and this in turn led to the employment of \"Resurrectionists\", body-snatchers who would steal corpses for use in the new schools. One of these schools was run by William Hunter (1718-1783) and he is referred to in this print by the dropped piece of paper inscribed \"Hunter's lectu<res>\". M.D. George in the British Museum catalogue (loc. cit.) describes the running man as \"a lean man in a doctor's tie-wig\" and identifies him as William Hunter himself. For other satires on William Hunter and his anatomy school and museum, see the Wellcome Library catalogue, nos 25405i and 25435i"
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1183515'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons, Attribution license</a>.<br/><br/>This licence permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b11835151",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b11835151.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b11835151",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b11835151",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11835151-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11835151",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11835151, Digicode: digicon, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b11835151/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b11835151/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b11835151/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/0eeca15a-8387-4203-b342-48200c591ecd/full/100,71/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/0eeca15a-8387-4203-b342-48200c591ecd",
+              "protocol": "http://iiif.io/api/image",
+              "height": 727,
+              "width": 1024,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 71
+                },
+                {
+                  "width": 200,
+                  "height": 142
+                },
+                {
+                  "width": 400,
+                  "height": 284
+                },
+                {
+                  "width": 1024,
+                  "height": 727
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 5604,
+          "width": 7888,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b11835151/imageanno/0eeca15a-8387-4203-b342-48200c591ecd",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/0eeca15a-8387-4203-b342-48200c591ecd/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 727,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/0eeca15a-8387-4203-b342-48200c591ecd",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b11835151/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

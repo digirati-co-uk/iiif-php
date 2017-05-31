@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b11757280/manifest",
+  "@type": "sc:Manifest",
+  "label": "A goat-headed man caresses a sleeping ewe-headed woman; representing the notion of animal magnetism and its application by physicians. Etching after M. Voltz (?), 1815.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "A goat-headed man caresses a sleeping ewe-headed woman; representing the notion of animal magnetism and its application by physicians. Etching after M. Voltz (?), 1815."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Voltz, Michael"
+    },
+    {
+      "label": "Description",
+      "value": "The goat-doctor has removed his jacket and rolled up his sleeves. A clyster appears to be emerging from his jacket pocket. The painting on the wall shows an eagle descending on a classically dressed woman, who sits next to a cup from which ascends a snake. This may refer to one of the stories from Ovid's 'Metamorphoses', which lying next to the woman on the bed. Otto Baur traces the meaning of this print back to an anonymous French print of 1784 called 'Le doigt magique ou le magnetisme animal' which is lettered 'simium semper simius', a parody of Hahnemann's slogan on the treatment of like with like. This much discussed notion was thus compounded with the controversy over Mesmer's researches. In the French print however, the woman is still human"
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1175728'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by/4.0/\">Creative Commons, Attribution license</a>.<br/><br/>This licence permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b11757280",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b11757280.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b11757280",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b11757280",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11757280-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11757280",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11757280, Digicode: digpathways(Mindcraft), Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b11757280/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b11757280/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b11757280/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/ba2ccaf1-308f-4afb-934f-448cc71cf50b/full/71,100/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/ba2ccaf1-308f-4afb-934f-448cc71cf50b",
+              "protocol": "http://iiif.io/api/image",
+              "height": 1024,
+              "width": 727,
+              "sizes": [
+                {
+                  "width": 71,
+                  "height": 100
+                },
+                {
+                  "width": 142,
+                  "height": 200
+                },
+                {
+                  "width": 284,
+                  "height": 400
+                },
+                {
+                  "width": 727,
+                  "height": 1024
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 2946,
+          "width": 2092,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b11757280/imageanno/ba2ccaf1-308f-4afb-934f-448cc71cf50b",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/ba2ccaf1-308f-4afb-934f-448cc71cf50b/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 727,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/ba2ccaf1-308f-4afb-934f-448cc71cf50b",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b11757280/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

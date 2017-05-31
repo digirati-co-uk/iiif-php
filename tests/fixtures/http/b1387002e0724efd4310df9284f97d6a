@@ -1,0 +1,142 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://wellcomelibrary.org/iiif/b11748412/manifest",
+  "@type": "sc:Manifest",
+  "label": "Sadi Carnot, the president of France, lies in bed having his pulse taken. Lithograph by H. de Toulouse-Lautrec, 1893.",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Sadi Carnot, the president of France, lies in bed having his pulse taken. Lithograph by H. de Toulouse-Lautrec, 1893."
+    },
+    {
+      "label": "Author(s)",
+      "value": "Toulouse-Lautrec, Henri de"
+    },
+    {
+      "label": "Description",
+      "value": "A pair of hands appear from the bottom-right hand corner, carrying a bowl of soup. Carnot holds a sheet of paper, possibly a will, which appears to bear the legend 'Benne'\n\nMarie François Sadi Carnot (18371894) was the President of the French Republic from 1887 to 1894. He was a popular and staunch defender of the republic. In the 1890s he suffered from an illness which was said to be due to liver disease. In 1893 he was the subject of a comic monologue by the variety performer Eugène Lemercier, which is illustrated in this lithograph by Toulouse-Lautrec. It shows Carnot as an invalid wrapped up in bed with a bandage round his head, being served a bowl of broth, and having his pulse taken by an élite physician. The present day battery of physical tests carried out by pathologists and radiologists did not exist in Carnot's time: academic  physicians used traditional methods of clinical examination derived from the Hippocratic writings, with a few additional techniques such as the stethoscope and endoscope. Carnot did not die of his illness: he was assassinated in 1894, an occasion which caused much grief in France and elsewhere\n\n\"Designed to illustrate the cover of the text of a monologue delivered at the Chat Noir cabaret in Montmartre, a favorite haunt of the artistic and literary avant-garde of the 1880s and 1890s. The monologue was an irreverent spoof on the president of France, Sadi Carnot, which ended with the refrain: 'If Carnot is ill, it is probably in order to be like the government'\" (Boyar, op. cit. p. 7)"
+    },
+    {
+      "label": "Attribution",
+      "value": "Wellcome Library<br/>License: CC-BY-NC"
+    },
+    {
+      "label": "",
+      "value": "<a href='https://search.wellcomelibrary.org/iii/encore/record/C__Rb1174841'>View full catalogue record</a>"
+    },
+    {
+      "label": "Full conditions of use",
+      "value": "You have permission to make copies of this work under a <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\"_top\" href=\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library."
+    }
+  ],
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "logo": "https://wellcomelibrary.org/assets/img/squarelogo64.png",
+  "related": {
+    "@id": "https://wellcomelibrary.org/item/b11748412",
+    "format": "text/html"
+  },
+  "seeAlso": [
+    {
+      "@id": "https://wellcomelibrary.org/data/b11748412.json",
+      "format": "application/json",
+      "profile": "http://wellcomelibrary.org/profiles/res"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/schemaorg/b11748412",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/schema"
+    },
+    {
+      "@id": "https://wellcomelibrary.org/resource/dublincore/b11748412",
+      "format": "application/ld+json",
+      "profile": "http://iiif.io/community/profiles/discovery/dc"
+    }
+  ],
+  "service": [
+    {
+      "@context": "http://wellcomelibrary.org/ld/iiif-ext/0/context.json",
+      "@id": "https://wellcomelibrary.org/iiif/b11748412-0/access-control-hints-service",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "accessHint": "open"
+    },
+    {
+      "@context": "http://universalviewer.io/context.json",
+      "@id": "http://wellcomelibrary.org/service/trackingLabels/b11748412",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "trackingLabel": "Format: artwork, Institution: n/a, Identifier: b11748412, Digicode: digicon, Collection code: n/a"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://wellcomelibrary.org/iiif/b11748412/sequence/s0",
+      "@type": "sc:Sequence",
+      "label": "Sequence s0",
+      "rendering": {
+        "@id": "https://dlcs.io/pdf/wellcome/pdf-item/b11748412/0",
+        "format": "application/pdf",
+        "label": "Download as PDF"
+      },
+      "canvases": [
+        {
+          "@id": "https://wellcomelibrary.org/iiif/b11748412/canvas/c0",
+          "@type": "sc:Canvas",
+          "label": " - ",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/0c94dc98-1e0c-4b69-bf51-01ac96b47f5e/full/76,100/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/0c94dc98-1e0c-4b69-bf51-01ac96b47f5e",
+              "protocol": "http://iiif.io/api/image",
+              "height": 1024,
+              "width": 775,
+              "sizes": [
+                {
+                  "width": 76,
+                  "height": 100
+                },
+                {
+                  "width": 151,
+                  "height": 200
+                },
+                {
+                  "width": 303,
+                  "height": 400
+                },
+                {
+                  "width": 775,
+                  "height": 1024
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 3107,
+          "width": 2350,
+          "images": [
+            {
+              "@id": "https://wellcomelibrary.org/iiif/b11748412/imageanno/0c94dc98-1e0c-4b69-bf51-01ac96b47f5e",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/0c94dc98-1e0c-4b69-bf51-01ac96b47f5e/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 775,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/0c94dc98-1e0c-4b69-bf51-01ac96b47f5e",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://wellcomelibrary.org/iiif/b11748412/canvas/c0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
