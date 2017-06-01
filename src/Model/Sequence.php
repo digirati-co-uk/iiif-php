@@ -22,7 +22,7 @@ class Sequence
         }, $sequence['canvases']);
 
         return new static(
-            $sequence['label'],
+            $sequence['label'] ?? '',
             $canvases
         );
     }
