@@ -35,7 +35,7 @@ class Manifest
     {
         return new static(
             $data['@id'],
-            $data['label'] ?? null,
+            $data['label'] ?? '',
             array_map(function ($sequence) {
                 return Sequence::fromArray($sequence);
             }, $data['sequences'] ?? [])
@@ -71,7 +71,7 @@ class Manifest
 
     public function getLabel(): string
     {
-        return $this->label;
+        return $this->label ?? '';
     }
 
     public function getCanvasNumber($num = 0)
