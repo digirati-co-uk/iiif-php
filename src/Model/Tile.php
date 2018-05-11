@@ -29,7 +29,7 @@ class Tile
     {
         return new static(
             $tile['width'],
-            $tile['height'],
+            $tile['height'] ?? $tile['width'],
             $tile['scaleFactors']
         );
     }
