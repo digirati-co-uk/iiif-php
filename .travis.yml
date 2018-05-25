@@ -2,7 +2,8 @@ language: php
 php:
   - 7.0
   - 7.1
+  - 7.2
 script:
   - composer install
-  - ./vendor/bin/phpunit
-  - php coverage.php clover.xml 30
+  - ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+  - php coverage.php build/logs/clover.xml 100

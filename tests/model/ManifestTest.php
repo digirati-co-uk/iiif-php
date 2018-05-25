@@ -164,4 +164,38 @@ class ManifestTest extends TestCase
         });
         $this->assertInstanceOf(Manifest::class, $manifest);
     }
+
+    public function testGetCanvasRegionFromUrl()
+    {
+      $id = __DIR__ . '/../fixtures/manifest-a.json';
+      $manifest = ResourceFactory::create($id, function ($file) {
+        return json_decode(file_get_contents($file), true);
+      });
+      $uri = 'http://dams.llgc.org.uk/iiif/2.0/4654878/canvas/4654879.json#xywh=0,0,600,900';
+      $regionUrl = $manifest->getCanvasRegionFromUrl($uri);
+      $this->assertEquals('http://dams.llgc.org.uk/iiif/2.0/image/4654879/0,0,600,900/256,/0/default.jpg', $regionUrl);
+    }
+
+    public function testGetCanvasRegionFromUrlWhenNull()
+    {
+      $id = __DIR__ . '/../fixtures/manifest-a.json';
+      $manifest = ResourceFactory::create($id, function ($file) {
+        return json_decode(file_get_contents($file), true);
+      });
+      $uri = 'http://dams.llgc.org.uk/iiif/2.0/4654878/canvas/invalid.json#xywh=0,0,600,900';
+      $regionUrl = $manifest->getCanvasRegionFromUrl($uri);
+      $this->assertNull($regionUrl);
+    }
+
+    public function testGetCanvasNumber()
+    {
+      $id = __DIR__ . '/../fixtures/manifest-a.json';
+      $manifest = ResourceFactory::create($id, function ($file) {
+        return json_decode(file_get_contents($file), true);
+      });
+
+      $canvas = $manifest->getCanvasNumber(0);
+      $this->assertInstanceOf('IIIF\Model\Canvas', $canvas);
+      $this->assertEquals('http://dams.llgc.org.uk/iiif/2.0/4654878/canvas/4654879.json', $canvas->getId());
+    }
 }

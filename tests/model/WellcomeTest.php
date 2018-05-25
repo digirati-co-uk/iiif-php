@@ -1,8 +1,6 @@
 <?php
 
-
 namespace IIIF\Tests\model;
-
 
 use IIIF\Model\Collection;
 use IIIF\Model\LazyManifest;
@@ -42,9 +40,6 @@ class WellcomeTest extends TestCase
                 return json_decode(file_get_contents($file), true);
             }
             throw new \Exception('Please comment out lines below to record test cases.');
-//            $content = file_get_contents($url);
-//            file_put_contents($file, $content);
-//            return json_decode($content, true);
         });
         foreach ($collection->getManifests() as $manifest) {
             $this->assertInstanceOf(Manifest::class, $manifest);
