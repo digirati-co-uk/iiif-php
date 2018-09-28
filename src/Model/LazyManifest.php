@@ -33,12 +33,12 @@ class LazyManifest extends Manifest
      * @param string $label label provided for this Manifest
      * @param Sequence[] $sequences Sequences for this Manifest
      */
-    public function __construct($id, $label = null, array $sequences = null)
+    public function __construct($id, $label = null, array $sequences = null, $thumbnail = [])
     {
         $this->loader = function ($url) {
             return json_decode(file_get_contents($url), true);
         };
-        parent::__construct($id, $label, $sequences);
+        parent::__construct($id, $label, $sequences, $thumbnail);
     }
 
     /**
@@ -58,13 +58,18 @@ class LazyManifest extends Manifest
      */
     public static function fromArray(array $data): Manifest
     {
-        return new static(
+        $manifest = new static(
             $data['@id'],
             $data['label'] ?? null,
             array_map(function ($sequence) {
                 return Sequence::fromArray($sequence);
-            }, $data['sequences'] ?? [])
+            }, $data['sequences'] ?? []),
+            $data['thumbnail'] ?? []
         );
+
+        $manifest->setSource($data);
+
+        return $manifest;
     }
 
     /**
@@ -82,6 +87,7 @@ class LazyManifest extends Manifest
         $this->sequences = array_map(function ($sequence) {
             return Sequence::fromArray($sequence);
         }, $data['sequences'] ?? []);
+        $this->thumbnail = $data['thumbnail'] ?? [];
         $this->isLoaded = true;
     }
 
@@ -106,7 +112,9 @@ class LazyManifest extends Manifest
      */
     public function getLabel(): string
     {
-        $this->load();
+        if (!$this->label) {
+            $this->load();
+        }
 
         return parent::getLabel();
     }

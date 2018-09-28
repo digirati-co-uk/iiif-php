@@ -37,21 +37,40 @@ class Manifest
      * @var string string the URI for the manifest
      */
     protected $id;
+    /**
+     * @var array
+     */
+    protected $thumbnail;
+
+    protected $source;
 
     /**
      * Constructor
      * @param string $id URI for the manifest
      * @param string $label label provided for the manifest
      * @param Sequence[] $sequences in which this manifest is structured
+     * @param array $thumbnail Thumbnail for manifest
      */
     public function __construct(
         string $id,
         string $label = null,
-        array $sequences
+        array $sequences = [],
+        array $thumbnail = []
     ) {
         $this->label = $label;
         $this->sequences = $sequences;
         $this->id = $id;
+        $this->thumbnail = $thumbnail;
+    }
+
+    protected function setSource(array $source = null)
+    {
+        $this->source = $source;
+    }
+
+    public function getSource()
+    {
+        return $this->source;
     }
 
     /**
@@ -80,13 +99,18 @@ class Manifest
      */
     public static function fromArray(array $data): self
     {
-        return new static(
+        $manifest = new static(
             $data['@id'],
             $data['label'] ?? '',
             array_map(function ($sequence) {
                 return Sequence::fromArray($sequence);
-            }, $data['sequences'] ?? [])
+            }, $data['sequences'] ?? []),
+            $data['thumbnail'] ?? []
         );
+
+        $manifest->setSource($data);
+
+        return $manifest;
     }
 
     /**
@@ -215,5 +239,24 @@ class Manifest
     public function containsCanvas(string $id, int $sequence = 0)
     {
         return (bool) $this->getCanvas($id, $sequence);
+    }
+
+    /**
+     * @return string
+     */
+    public function getThumbnail(): string
+    {
+        if (is_string($this->thumbnail)) {
+            return $this->thumbnail;
+        }
+        if (isset($this->thumbnail['@id'])) {
+            return $this->thumbnail['@id'];
+        }
+        return null;
+    }
+
+    public function getAttribution()
+    {
+        return $this->source['attribution'] ?? null;
     }
 }
