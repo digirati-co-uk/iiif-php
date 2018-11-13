@@ -41,8 +41,14 @@ class Manifest
      * @var array
      */
     protected $thumbnail;
-
+    /**
+     * @var array
+     */
     protected $source;
+    /**
+     * @var string
+     */
+    private $description;
 
     /**
      * Constructor
@@ -164,6 +170,11 @@ class Manifest
         return $this->label ?? '';
     }
 
+    public function getDescription(): string
+    {
+        return $this->source['description'] ?? '';
+    }
+
     /**
      * Retrieve a canvas using its index from the default sequence for this manifest
      * @param int $num the number
@@ -244,7 +255,7 @@ class Manifest
     /**
      * @return string
      */
-    public function getThumbnail(): string
+    public function getThumbnail()
     {
         if (is_string($this->thumbnail)) {
             return $this->thumbnail;
@@ -252,7 +263,10 @@ class Manifest
         if (isset($this->thumbnail['@id'])) {
             return $this->thumbnail['@id'];
         }
-        return null;
+
+        $thumbnails = $this->getThumbnails(0);
+
+        return $thumbnails[0] ?? '';
     }
 
     public function getAttribution()

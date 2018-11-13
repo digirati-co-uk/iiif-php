@@ -84,9 +84,9 @@ class Collection
         array $metadata = null
     ) {
         $this->id = $id;
-        $this->label = $label;
-        $this->description = $description;
-        $this->attribution = $attribution;
+        $this->label = $label ?? '';
+        $this->description = $description ?? '';
+        $this->attribution = $attribution ?? '';
         $this->manifests = $manifests;
         $this->metadata = $metadata;
     }
