@@ -81,7 +81,7 @@ class LazyManifest extends Manifest
             return null;
         }
         $loader = $this->loader;
-        $data = $loader($this->id);
+        $data = $loader($this->id, $this);
         $this->id = $data['id'] ?? $this->id;
         $this->label = $data['label'] ?? null;
         $this->sequences = array_map(function ($sequence) {

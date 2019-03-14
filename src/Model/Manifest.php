@@ -204,6 +204,10 @@ class Manifest
     {
         $canvases = $this->getSequence($sequenceNum);
 
+        if (!$canvases) {
+            return [];
+        }
+
         return $canvases->map(function (Canvas $canvas) {
             return $canvas->getThumbnail();
         });
