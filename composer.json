@@ -2,7 +2,7 @@
   "name": "dlcs/iiif-php",
   "license": "MIT",
   "type": "library",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "IIIF library for PHP",
   "authors": [
     {
