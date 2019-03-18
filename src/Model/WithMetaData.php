@@ -54,6 +54,10 @@ trait WithMetaData
      */
     public function getMetaData() : array
     {
+        if (isset($this->source['metadata'])) {
+            return $this->source['metadata'];
+        }
+
         return $this->metaData && is_array($this->metaData) ? $this->metaData : [];
     }
 

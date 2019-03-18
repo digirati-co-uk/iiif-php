@@ -44,7 +44,11 @@ class Canvas
     /**
      * @var string URI for the thumbnail used on this canvas
      */
-    private $thumbnail;
+    protected $thumbnail;
+    /**
+     * @var array Original source of canvas
+     */
+    protected $source;
 
     /**
      * Constructor
@@ -177,7 +181,7 @@ class Canvas
             return Image::fromArray($image);
         }, $canvas['images']);
 
-        return new static(
+        $canvasObj = new static(
             $canvas['@id'],
             $canvas['label'] ?? '',
             self::parseThumbnailService($canvas['thumbnail'] ?? null),
@@ -185,5 +189,30 @@ class Canvas
             $canvas['width'],
             $images
         );
+
+        $canvasObj->setSource($canvas);
+
+        return $canvasObj;
+    }
+
+    public function getAttribution()
+    {
+        return $this->source['attribution'] ?? null;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSource(): array
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param array $source
+     */
+    public function setSource(array $source): void
+    {
+        $this->source = $source;
     }
 }

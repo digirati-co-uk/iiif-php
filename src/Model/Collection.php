@@ -52,6 +52,11 @@ class Collection
     private $metadata;
 
     /**
+     * @var array original source of the collection.
+     */
+    private $source;
+
+    /**
      * Determines whether or not an array of values serializes a collection
      * @param [] $data the values for the serialized resource
      * @return boolean
@@ -79,9 +84,9 @@ class Collection
         array $metadata = null
     ) {
         $this->id = $id;
-        $this->label = $label;
-        $this->description = $description;
-        $this->attribution = $attribution;
+        $this->label = $label ?? '';
+        $this->description = $description ?? '';
+        $this->attribution = $attribution ?? '';
         $this->manifests = $manifests;
         $this->metadata = $metadata;
     }
@@ -160,6 +165,16 @@ class Collection
         return $this->id;
     }
 
+    protected function setSource(array $source = null)
+    {
+        $this->source = $source;
+    }
+
+    public function getSource()
+    {
+        return $this->source;
+    }
+
     /**
      * Construct an object from an array of values
      * @param [] $data array of values being used to construct a Collection
@@ -167,7 +182,7 @@ class Collection
      */
     public static function fromArray(array $data)
     {
-        return new static(
+        $collection = new static(
             $data['@id'],
             static::getLabelFromData($data['label'] ?? []),
             $data['description'] ?? null,
@@ -176,6 +191,10 @@ class Collection
                 return LazyManifest::fromArray($manifest);
             }, static::getManifestsFromData($data))
         );
+
+        $collection->setSource($data);
+
+        return $collection;
     }
 
     /**
@@ -190,5 +209,21 @@ class Collection
             /* @var LazyManifest $manifest */
             $manifest->setLoader($loader);
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getAttribution(): string
+    {
+        return $this->attribution;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return $this->description;
     }
 }
